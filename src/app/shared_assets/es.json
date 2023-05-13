@@ -1,0 +1,54 @@
+{
+    "app": {
+        "title": "Alo Third Parties",
+        "providers": {
+            "title": "Proveedores"
+        }
+    },
+    "formControls": {
+        "description": "Descripción",
+        "btnCancel": "Cancelar",
+        "btnClose": "Cerrar",
+        "selectOne": "Seleccione una opción:"
+    },
+    "tableColumns": {
+        "providersTable": {
+            "tlProviderId": "ProveedorId",
+            "tlProviderName": "Nombre Proveedor",
+            "tlProviderType": "Tipo Proveedor",
+            "status": "Estado"
+        }
+    },
+    "msg": {
+        "provider": {
+            "created": "Proveedor creado satisfactoriamente",
+            "updated": "Proveedor actualizado satisfactoriamente",
+            "errorCreated": "Error al crear el Proveedor: {{error_msg}}"
+        },
+        "invoice": {
+            "generate": "¿ Desea generar Factura?",
+            "tax": "Información Carga Fiscal"
+        }
+    },
+    "button": {
+        "viewLibrary": "Ver biblioteca",
+        "addProvider": "Crear proveedor",
+        "constructionLogistic": "Ver Logística de Obra",
+        "file": "Archivar",
+        "delete": "Eliminar",
+        "home": "Inicio",
+        "invoiceHistory": "Histórico Factura",
+        "route": "Recorridos",
+        "newOrder": "Nuevo Pedido",
+        "pieceList": "Lista de Piezas",
+        "saleUnitLocation": "Ubicación de las Unidades de Ventas",
+        "close": "Cerrar",
+        "cancel": "Cancelar",
+        "accept": "Aceptar",
+        "saveDraft": "Guardar Borrador",
+        "generate": "Generar",
+        "generateInvoice": "Generar Factura",
+        "newRouteButton": "Nuevo recorrido",
+        "print": "Imprimir"
+    }
+}

@@ -1,13 +1,17 @@
 <div class="title-container">
-    <h2 class="app-title">Alo Third Parties</h2>
-    <div class="inline-panel">
-
-        <button mat-button color="primary" class="mat-elevation-z0" (click)="onAddClick()">
-    <mat-icon class="main-button" [matTooltip]="addProviderTooltip">..
-      add_circle
-    </mat-icon>
-  </button>
-    </div>
+  <h2 class="app-title">Alo Third Parties</h2>
+  <div class="inline-panel">
+    <button
+      mat-button
+      color="primary"
+      class="mat-elevation-z0"
+      (click)="onAddClick()"
+    >
+      <mat-icon class="main-button" [matTooltip]="addProviderTooltip"
+        >.. add_circle
+      </mat-icon>
+    </button>
+  </div>
 </div>
 <!-- <mat-form-field appearance="outline" class="no-padding">
   <mat-label>Seleccione una opción: </mat-label>
@@ -16,5 +20,8 @@
       <mat-option [value]="VIEWS_LIST[1]"> Pedidos </mat-option>
   </mat-select>
 </mat-form-field> -->
-<app-provider *ngIf="selectedView === VIEWS_LIST[0]" #providersCmp></app-provider>
+<app-provider
+  *ngIf="selectedView === VIEWS_LIST[0]"
+  #providersCmp
+></app-provider>
 <!-- <app-orders *ngIf="selectedView === VIEWS_LIST[1]"></app-orders> -->

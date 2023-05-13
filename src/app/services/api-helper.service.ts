@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { IApiHelperOptions } from '../interfaces/api-helper-options.interface';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ApiHelperService {
   #window: any = { DatosUsuario: null };
@@ -22,14 +22,14 @@ export class ApiHelperService {
   ) => {
     const { query = '', path = '', body } = options;
     console.log('body>>>', body);
-    const url = `${domain}/${controller}/${path}${
+    const url = `${domain}${controller}/${path}${
       query !== '' ? `?${query}` : ''
     }`;
     let httpConfig: any = {
       method,
       headers: {
-        'Content-Type': 'application/json'
-      }
+        'Content-Type': 'application/json',
+      },
     };
     if (body) httpConfig['body'] = JSON.stringify(body);
     return fetch(url, httpConfig)

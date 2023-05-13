@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { ProviderComponent } from './provider/provider.component';
 import { ToastrService } from 'ngx-toastr';
@@ -8,10 +8,10 @@ const PROVIDERS_VIEW = 'PROVIDERS';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
-  title = 'alo-third-parties';
+export class AppComponent implements AfterViewInit {
+  //title = 'alo-third-parties';
 
   @ViewChild('providersCmp')
   providersComponent!: ProviderComponent;
@@ -33,13 +33,13 @@ export class AppComponent {
     if (this.selectedView === PROVIDERS_VIEW) this.getProvider();
   };
 
-  getProvider = async (project: any = null) => {
+  getProvider = async (provider: any = null) => {
     const dialogConfig = new MatDialogConfig();
     dialogConfig.disableClose = true;
     dialogConfig.autoFocus = true;
     dialogConfig.data = {
       id: 'P',
-      project
+      provider,
     };
 
     dialogConfig.height = '800px';
@@ -54,5 +54,4 @@ export class AppComponent {
       }
     });
   };
-
 }
